@@ -22,11 +22,22 @@ public class LoginPage {
     @FindBy(xpath = "//input[@value='Sign In']")
     WebElement signInBtn;
 
+    @FindBy(xpath ="//h1[@class='wc-title white text-center']")
+    WebElement welcomeMessage;
+
     public void login(String user, String pass){
 
         username.sendKeys(user);
         password.sendKeys(pass);
         signInBtn.click();
+    }
+
+    public void verifyWelcomeMessage(String expectedText){
+        String text = welcomeMessage.getText();
+        if(text.equalsIgnoreCase(expectedText)){
+            System.out.println("Welcome text Matched");
+        }
+
     }
 
 }
