@@ -15,9 +15,10 @@ public class LoginStepsDef extends BaseClass {
     LoginPage loginPage;
     Map<String, String> data;
 
+
     @Given("I launch the application")
     public void iLaunchTheApplication() {
-        launchBrowser();
+        loginPage = new LoginPage(driver);
     }
 
     @When("I enter valid credentials from {int}")

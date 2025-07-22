@@ -26,7 +26,6 @@ public class LoginPage {
     WebElement welcomeMessage;
 
     public void login(String user, String pass){
-
         username.sendKeys(user);
         password.sendKeys(pass);
         signInBtn.click();

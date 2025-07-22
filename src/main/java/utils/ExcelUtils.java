@@ -51,11 +51,11 @@ public class ExcelUtils {
         }
         switch (cell.getCellType()) {
             case STRING:
-                cell.getStringCellValue();
+                return cell.getStringCellValue();
             case NUMERIC:
-                String.valueOf((int) cell.getNumericCellValue());
+                return String.valueOf((int) cell.getNumericCellValue());
             case BOOLEAN:
-                String.valueOf((boolean) cell.getBooleanCellValue());
+                return String.valueOf((boolean) cell.getBooleanCellValue());
             default:
                 return "";
         }
